@@ -1,12 +1,12 @@
-const CACHE_NAME = 'site-cache-v4';
-const DATA_CACHE_NAME = 'data-cache-v4';
+const CACHE_NAME = 'site-cache-v5';
+const DATA_CACHE_NAME = 'data-cache-v5';
 
 const FILES_TO_CACHE = [
    '/',
    '/index.html',
    '/js/index.js',
-   '/js/db.js',
    '/css/styles.css',
+   '/manifest.webmanifest',
    '/icons/icon-192x192.png'
 ];
 
@@ -41,7 +41,7 @@ self.addEventListener('activate', function(evt) {
 
 // Intercept fetch requests
 self.addEventListener('fetch', function(evt) {
-    if (evt.request.url.includes('/api/')) {
+    if (evt.request.url.includes('/api/transaction')) {
         evt.respondWith(
         caches
             .open(DATA_CACHE_NAME)
