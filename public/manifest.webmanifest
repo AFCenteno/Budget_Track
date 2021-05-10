@@ -20,6 +20,6 @@
 ],
 "theme_color": "#ffffff",
 "background_color": "#ffffff",
-"start_url": "/",
+"start_url": "https://budgettrackerac.herokuapp.com/",
 "display": "standalone"
 }
